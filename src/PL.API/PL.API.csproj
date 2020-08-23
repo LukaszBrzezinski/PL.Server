@@ -3,8 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>ba5743d2-fb36-44c9-92cb-934bc65638fb</UserSecretsId>
+    
+    <!--DOCKER Debug configuration-->
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
+    <DockerfileFile>..\..\Dockerfile</DockerfileFile>
+    <DockerfileRunArguments>--net=pl-network</DockerfileRunArguments>
   </PropertyGroup>
 
   <ItemGroup>
