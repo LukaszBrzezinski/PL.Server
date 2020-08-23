@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{160D7539-D7E5-414D-BCAC-EDB224310988}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.API", "src\PL.API\PL.API.csproj", "{CFCF174A-19E8-43E1-B206-4852A6160888}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PL.API", "src\PL.API\PL.API.csproj", "{CFCF174A-19E8-43E1-B206-4852A6160888}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authorization", "Authorization", "{393E4066-64E6-4339-9C7F-8A8433D937C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.Authorization", "PL.Authorization\PL.Authorization.csproj", "{5D46874A-9964-4E09-8F01-CCBC63A277EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,18 @@ Global
 		{CFCF174A-19E8-43E1-B206-4852A6160888}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFCF174A-19E8-43E1-B206-4852A6160888}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFCF174A-19E8-43E1-B206-4852A6160888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D46874A-9964-4E09-8F01-CCBC63A277EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D46874A-9964-4E09-8F01-CCBC63A277EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D46874A-9964-4E09-8F01-CCBC63A277EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D46874A-9964-4E09-8F01-CCBC63A277EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CFCF174A-19E8-43E1-B206-4852A6160888} = {160D7539-D7E5-414D-BCAC-EDB224310988}
+		{393E4066-64E6-4339-9C7F-8A8433D937C8} = {160D7539-D7E5-414D-BCAC-EDB224310988}
+		{5D46874A-9964-4E09-8F01-CCBC63A277EB} = {393E4066-64E6-4339-9C7F-8A8433D937C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {93F34618-5D3A-4701-92A3-377FCA5FBEF2}
