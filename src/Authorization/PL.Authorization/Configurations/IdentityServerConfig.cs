@@ -21,9 +21,10 @@ namespace PL.Authorization.Configurations
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
-                new IdentityResources.Phone(),
-                new IdentityResources.Email(),
-                new IdentityResource(ScopeConstants.Roles, new List<string> { JwtClaimTypes.Role })
+                new IdentityResource(ScopeConstants.Roles, new List<string>
+                {
+                    JwtClaimTypes.Role
+                })
             };
         }
 
@@ -32,15 +33,7 @@ namespace PL.Authorization.Configurations
         {
             return new List<ApiResource>
             {
-                new ApiResource(ApiName) {
-                    UserClaims = {
-                        JwtClaimTypes.Name,
-                        JwtClaimTypes.Email,
-                        JwtClaimTypes.PhoneNumber,
-                        JwtClaimTypes.Role,
-                        ClaimConstants.Permission
-                    }
-                }
+                new ApiResource(ApiName, ApiFriendlyName)
             };
         }
 
@@ -62,8 +55,6 @@ namespace PL.Authorization.Configurations
                     AllowedScopes = {
                         IdentityServerConstants.StandardScopes.OpenId, // For UserInfo endpoint.
                         IdentityServerConstants.StandardScopes.Profile,
-                        IdentityServerConstants.StandardScopes.Phone,
-                        IdentityServerConstants.StandardScopes.Email,
                         ScopeConstants.Roles,
                         ApiName
                     },

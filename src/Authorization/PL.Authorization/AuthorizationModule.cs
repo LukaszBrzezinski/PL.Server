@@ -1,4 +1,5 @@
 ﻿using System;
+using IdentityServer4.AspNetIdentity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
