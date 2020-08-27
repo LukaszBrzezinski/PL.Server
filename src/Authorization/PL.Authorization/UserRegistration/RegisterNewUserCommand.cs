@@ -34,7 +34,16 @@ namespace PL.Authorization.Application.UserRegistration
     {
         public Task<Unit> Handle(RegisterNewUserCommand request, CancellationToken cancellationToken)
         {
-            var password = 
+            if (!CanRegisterUser()) throw new NotImplementedException();
+
+            var password = PasswordManager.HashPassword(request.Password);
+
+
+        }
+
+        private bool CanRegisterUser()
+        {
+            throw new NotImplementedException();
         }
     }
 }
