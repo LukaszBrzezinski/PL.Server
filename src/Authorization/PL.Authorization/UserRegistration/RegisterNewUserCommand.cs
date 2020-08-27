@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using MediatR;
 using PL.BuildingBlocks.Application;
 
 namespace PL.Authorization.Application.UserRegistration
@@ -27,5 +30,11 @@ namespace PL.Authorization.Application.UserRegistration
         }
     }
 
-    public class RegisterNewUserCommandHandler 
+    public class RegisterNewUserCommandHandler : ICommandHandler<RegisterNewUserCommand>
+    {
+        public Task<Unit> Handle(RegisterNewUserCommand request, CancellationToken cancellationToken)
+        {
+            var password = 
+        }
+    }
 }
