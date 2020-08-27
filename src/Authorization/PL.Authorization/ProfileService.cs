@@ -39,7 +39,7 @@ namespace PL.Authorization
             var sub = context.Subject.GetSubjectId();
             var user = await _userManager.FindByIdAsync(sub);
 
-            context.IsActive = (user != null) && user.IsEnabled;
+            context.IsActive = (user != null) && context.IsActive;
         }
     }
 }

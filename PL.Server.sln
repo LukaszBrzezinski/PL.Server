@@ -9,11 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PL.API", "src\PL.API\PL.API
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authorization", "Authorization", "{393E4066-64E6-4339-9C7F-8A8433D937C8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PL.Authorization", "src\Authorization\PL.Authorization\PL.Authorization.csproj", "{F99EE505-B8EF-4E39-9EB0-21287FBDE8CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PL.Authorization.Application", "src\Authorization\PL.Authorization\PL.Authorization.Application.csproj", "{F99EE505-B8EF-4E39-9EB0-21287FBDE8CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{EFA509ED-16F1-43D5-BFD1-75309B04EA5A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.BuildingBlocks.Infrastructure", "src\BuildingBlocks\PL.BuildingBlocks.Infrastructure\PL.BuildingBlocks.Infrastructure.csproj", "{90D5A4D7-7334-4EFA-9E8F-D0FF8AEF264D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "F:\Pobrane\aspnet-core-3-signup-verification-api-master\aspnet-core-3-signup-verification-api-master\WebApi.csproj", "{6A6882DA-C3AE-4D43-B64E-E478276F5DC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.Authorization.Infrastructure", "PL.Authorization.Infrastructure\PL.Authorization.Infrastructure.csproj", "{43102F19-077A-4B82-BE0E-0584A85791D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.BuildingBlocks.Application", "PL.BuildingBlocks.Application\PL.BuildingBlocks.Application.csproj", "{A51F9347-464E-4650-9345-600C0C4B069E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{90D5A4D7-7334-4EFA-9E8F-D0FF8AEF264D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90D5A4D7-7334-4EFA-9E8F-D0FF8AEF264D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90D5A4D7-7334-4EFA-9E8F-D0FF8AEF264D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6882DA-C3AE-4D43-B64E-E478276F5DC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6882DA-C3AE-4D43-B64E-E478276F5DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6882DA-C3AE-4D43-B64E-E478276F5DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6882DA-C3AE-4D43-B64E-E478276F5DC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43102F19-077A-4B82-BE0E-0584A85791D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43102F19-077A-4B82-BE0E-0584A85791D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43102F19-077A-4B82-BE0E-0584A85791D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43102F19-077A-4B82-BE0E-0584A85791D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A51F9347-464E-4650-9345-600C0C4B069E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A51F9347-464E-4650-9345-600C0C4B069E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A51F9347-464E-4650-9345-600C0C4B069E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A51F9347-464E-4650-9345-600C0C4B069E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +61,9 @@ Global
 		{F99EE505-B8EF-4E39-9EB0-21287FBDE8CD} = {393E4066-64E6-4339-9C7F-8A8433D937C8}
 		{EFA509ED-16F1-43D5-BFD1-75309B04EA5A} = {160D7539-D7E5-414D-BCAC-EDB224310988}
 		{90D5A4D7-7334-4EFA-9E8F-D0FF8AEF264D} = {EFA509ED-16F1-43D5-BFD1-75309B04EA5A}
+		{6A6882DA-C3AE-4D43-B64E-E478276F5DC0} = {160D7539-D7E5-414D-BCAC-EDB224310988}
+		{43102F19-077A-4B82-BE0E-0584A85791D8} = {393E4066-64E6-4339-9C7F-8A8433D937C8}
+		{A51F9347-464E-4650-9345-600C0C4B069E} = {EFA509ED-16F1-43D5-BFD1-75309B04EA5A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {93F34618-5D3A-4701-92A3-377FCA5FBEF2}
