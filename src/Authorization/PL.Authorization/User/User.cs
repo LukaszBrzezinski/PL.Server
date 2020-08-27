@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace PL.Authorization.Infrastructure.Models
+namespace PL.Authorization.Application.User
 {
     public class User
     {
