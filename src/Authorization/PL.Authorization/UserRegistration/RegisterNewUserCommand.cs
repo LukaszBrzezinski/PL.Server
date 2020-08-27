@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using MediatR;
-using PL.Authorization.Infrastructure.Models;
 using PL.BuildingBlocks.Application;
 
 namespace PL.Authorization.Application.UserRegistration
@@ -28,29 +23,6 @@ namespace PL.Authorization.Application.UserRegistration
             Email = email;
             FirstName = firstName;
             LastName = lastName;
-        }
-    }
-
-    public class RegisterNewUserCommandHandler : ICommandHandler<RegisterNewUserCommand>
-    {
-        public Task<Unit> Handle(RegisterNewUserCommand request, CancellationToken cancellationToken)
-        {
-            if (!CanRegisterUser()) throw new NotImplementedException();
-            var password = PasswordManager.HashPassword(request.Password);
-
-            var user = User.Create(
-                request.Login,
-                password,
-                request.Email,
-                request.FirstName,
-                request.LastName);
-
-
-        }
-
-        private bool CanRegisterUser()
-        {
-            throw new NotImplementedException();
         }
     }
 }
