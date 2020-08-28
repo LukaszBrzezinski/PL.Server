@@ -2,7 +2,8 @@
 
 namespace PL.Authorization.Application.User
 {
-    public class User
+    //TODO: consider UserAccountRequest/Draft
+    public class UserAccount
     {
         public Guid UserId { get; private set; }
 
@@ -13,7 +14,7 @@ namespace PL.Authorization.Application.User
         private string _firstName;
         private string _lastName;
 
-        private User(string login, string password, string email, bool isActive, string firstName, string lastName, Guid userId)
+        private UserAccount(string login, string password, string email, bool isActive, string firstName, string lastName, Guid userId)
         {
             _login = login;
             _password = password;
@@ -24,16 +25,16 @@ namespace PL.Authorization.Application.User
             UserId = userId;
         }
 
-        private User()
+        private UserAccount()
         {
             // For ef core
         }
 
-        public static User Create(string login, string password, string email, string firstName, string lastName)
+        public static UserAccount Create(string login, string password, string email, string firstName, string lastName)
         {
             var userId = Guid.NewGuid();
 
-            return new User(
+            return new UserAccount(
                 login, 
                 password, 
                 email, 

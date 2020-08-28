@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace PL.Authorization.Application.User
 {
-    public interface IUserRepository
+    public interface IUserAccountRepository
     {
-        Task AddAsync(User user);
+        Task AddAsync(UserAccount userAccount);
     }
 }

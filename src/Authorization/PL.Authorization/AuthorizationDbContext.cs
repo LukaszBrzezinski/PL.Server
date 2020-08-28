@@ -7,7 +7,7 @@ namespace PL.API.Authorization
 {
     public class AuthorizationDbContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
+        public DbSet<UserAccount> Users { get; set; }
         public AuthorizationDbContext(DbContextOptions options) : base(options)
         {
         }

@@ -9,9 +9,9 @@ namespace PL.Authorization.Application.UserRegistration
 {
     public class RegisterNewUserCommandHandler : ICommandHandler<RegisterNewUserCommand>
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IUserAccountRepository _userRepository;
 
-        public RegisterNewUserCommandHandler(IUserRepository userRepository)
+        public RegisterNewUserCommandHandler(IUserAccountRepository userRepository)
         {
             _userRepository = userRepository;
         }
@@ -21,7 +21,7 @@ namespace PL.Authorization.Application.UserRegistration
             if (!CanRegisterUser()) throw new NotImplementedException();
             var password = PasswordManager.HashPassword(request.Password);
 
-            var user = User.User.Create(
+            var user = UserAccount.Create(
                 request.Login,
                 password,
                 request.Email,

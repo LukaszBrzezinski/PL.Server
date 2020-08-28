@@ -35,7 +35,7 @@ namespace PL.Authorization
             // TODO: Configure Identity options and password complexity
             services.Configure<IdentityOptions>(options =>
             {
-                // User settings
+                // UserAccount settings
                 options.User.RequireUniqueEmail = true;
 
                 //    //// Password settings
