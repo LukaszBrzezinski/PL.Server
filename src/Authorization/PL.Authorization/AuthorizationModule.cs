@@ -4,14 +4,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using PL.API.Authorization;
-using PL.Authorization.Configurations;
-using PL.Authorization.Models;
+using PL.Authorization.Application.Configurations;
 using PL.BuildingBlocks.Infrastructure;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Pomelo.EntityFrameworkCore.MySql.Storage;
 
-namespace PL.Authorization
+namespace PL.Authorization.Application
 {
     public class AuthorizationModule : IModule
     {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PL.Authorization.Configurations
+﻿namespace PL.Authorization.Application.Configurations
 {
     public static class ClaimConstants
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using PL.API.Authorization;
+using PL.Authorization.Application;
 using PL.Authorization.Application.User;
 
 namespace PL.Authorization.Infrastructure.User

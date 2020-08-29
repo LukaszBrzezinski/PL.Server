@@ -1,9 +1,7 @@
-﻿using System;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using PL.Authorization.Application.User;
 
-namespace PL.API.Authorization
+namespace PL.Authorization.Application
 {
     public class AuthorizationDbContext : DbContext
     {
