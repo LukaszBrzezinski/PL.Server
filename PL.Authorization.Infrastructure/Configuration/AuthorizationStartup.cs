@@ -21,7 +21,10 @@ namespace PL.Authorization.Infrastructure.Configuration
         {
             var containerBuilder = new ContainerBuilder();
 
+            var sqlLiteConnectionString = "Data Source=:memory:";
+
             containerBuilder.RegisterModule(new ProcessingModule());
+            containerBuilder.RegisterModule(new DatabaseModule(sqlLiteConnectionString));
 
             _container = containerBuilder.Build();
             AuthorizationCompositionRoot.SetContainer(_container);

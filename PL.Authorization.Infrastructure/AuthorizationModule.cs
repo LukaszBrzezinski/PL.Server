@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Autofac;
+using PL.Authorization.Application;
 using PL.BuildingBlocks.Application;
 
 namespace PL.Authorization.Infrastructure
