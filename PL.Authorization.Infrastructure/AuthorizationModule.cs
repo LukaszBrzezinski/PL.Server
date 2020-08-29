@@ -2,7 +2,7 @@
 
 namespace PL.Authorization.Infrastructure
 {
-    public class Class1
+    public class AuthorizationModule
     {
     }
 }
