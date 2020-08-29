@@ -12,8 +12,10 @@ namespace PL.Authorization.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
+            builder.HasDefaultSchema("auth");
+            builder.ApplyConfigurationsFromAssembly(typeof(AuthorizationDbContext).Assembly);
 
+            base.OnModelCreating(builder);
         }
     }
 }
