@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Models;
 
-namespace PL.Authorization.Configurations
+namespace PL.Authorization.Application.Configurations
 {
     public class IdentityServerConfig
     {

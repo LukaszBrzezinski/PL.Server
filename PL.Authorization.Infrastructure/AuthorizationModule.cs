@@ -5,12 +5,6 @@ using PL.BuildingBlocks.Application;
 
 namespace PL.Authorization.Infrastructure
 {
-    public interface IAuthorizationModule
-    {
-        Task ExecuteCommandAsync<TResult>(ICommand command);
-        Task<TResult> ExecuteQueryAsync<TResult>(IQuery<TResult> query);
-    }
-
     public class AuthorizationModule : IAuthorizationModule
     {
         public async Task ExecuteCommandAsync<TResult>(ICommand command)
