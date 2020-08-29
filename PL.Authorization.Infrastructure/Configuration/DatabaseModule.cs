@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Autofac;
 using Microsoft.EntityFrameworkCore;
+using PL.BuildingBlocks.Infrastructure;
 
 namespace PL.Authorization.Infrastructure.Configuration
 {
@@ -31,6 +32,10 @@ namespace PL.Authorization.Infrastructure.Configuration
             builder.RegisterAssemblyTypes(infrastructureAssembly)
                 .Where(type => type.Name.EndsWith("Repository"))
                 .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<UnitOfWork>()
+                .As<IUnitOfWork>()
                 .InstancePerLifetimeScope();
         }
 

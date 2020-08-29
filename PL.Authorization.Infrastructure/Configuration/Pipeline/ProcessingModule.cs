@@ -21,6 +21,10 @@ namespace PL.Authorization.Infrastructure.Configuration.Pipeline
             builder.RegisterType<QueryBus>()
                 .As<IQueryBus>()
                 .InstancePerLifetimeScope();
+
+            builder.RegisterDecorator(
+                typeof(UnitOfWorkCommandBusDecorator),
+                typeof(ICommandBus));
         }
     }
 }
