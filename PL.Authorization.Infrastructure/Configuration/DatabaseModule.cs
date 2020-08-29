@@ -27,6 +27,13 @@ namespace PL.Authorization.Infrastructure.Configuration
             .AsSelf()
             .As<DbContext>()
             .InstancePerLifetimeScope();
+
+            var infrastructureAssembly = typeof(AuthorizationDbContext).Assembly;
+
+            builder.RegisterAssemblyTypes(infrastructureAssembly)
+                .Where(type => type.Name.EndsWith("Repository"))
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
         }
     }
 }
