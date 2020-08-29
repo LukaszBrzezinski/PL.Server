@@ -8,7 +8,7 @@ namespace PL.Authorization.Infrastructure
 {
     public class AuthorizationModule : IAuthorizationModule
     {
-        public async Task ExecuteCommandAsync<TResult>(ICommand command)
+        public async Task ExecuteCommandAsync(ICommand command)
         {
             using (var scope = AuthorizationCompositionRoot.BeginLifetimeScope())
             {

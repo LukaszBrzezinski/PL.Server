@@ -12,18 +12,15 @@ namespace PL.Authorization.Infrastructure.Configuration.Pipeline
     {
         protected override void Load(ContainerBuilder builder)
         {
-            //TODO: search Application layer assemblies 
             builder.AddMediatR(typeof(IAuthorizationModule).Assembly);
 
-            builder.RegisterType<ICommandBus>()
-                .As<CommandBus>()
+            builder.RegisterType<CommandBus>()
+                .As<ICommandBus>()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<IQueryBus>()
-                .As<QueryBus>()
+            builder.RegisterType<QueryBus>()
+                .As<IQueryBus>()
                 .InstancePerLifetimeScope();
-
-
         }
     }
 }
