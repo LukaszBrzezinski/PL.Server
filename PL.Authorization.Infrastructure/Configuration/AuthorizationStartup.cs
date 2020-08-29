@@ -12,7 +12,7 @@ namespace PL.Authorization.Infrastructure.Configuration
     {
         private static IContainer _container;
 
-        public static void Initialize(IConfiguration configuration, ILogger logger)
+        public static void Initialize()
         {
             ConfigureCompositionRoot();
         }
