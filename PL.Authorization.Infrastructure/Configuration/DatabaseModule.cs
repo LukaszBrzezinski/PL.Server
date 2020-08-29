@@ -19,9 +19,7 @@ namespace PL.Authorization.Infrastructure.Configuration
         {
             builder.Register(c =>
             {
-                var dbContextOptionsBuilder = new DbContextOptionsBuilder<AuthorizationDbContext>();
-                dbContextOptionsBuilder.UseSqlite(_databaseConnectionString);
-
+                var dbContextOptionsBuilder = CreateDbContextOptionsBuilder(_databaseConnectionString);
                 return new AuthorizationDbContext(dbContextOptionsBuilder.Options);
             })
             .AsSelf()
@@ -34,6 +32,18 @@ namespace PL.Authorization.Infrastructure.Configuration
                 .Where(type => type.Name.EndsWith("Repository"))
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
+        }
+
+        internal static DbContextOptionsBuilder<AuthorizationDbContext> CreateDbContextOptionsBuilder(string connectionString)
+        {
+            var dbContextOptionsBuilder = new DbContextOptionsBuilder<AuthorizationDbContext>();
+            dbContextOptionsBuilder.UseSqlite(connectionString, opt =>
+            {
+                opt.MigrationsAssembly(typeof(AuthorizationDbContext).Assembly.GetName().Name);
+                opt.MigrationsHistoryTable("ef_migrationHistory");
+            });
+
+            return dbContextOptionsBuilder;
         }
     }
 }

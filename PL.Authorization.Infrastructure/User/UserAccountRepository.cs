@@ -18,7 +18,7 @@ namespace PL.Authorization.Infrastructure.User
 
         public async Task AddAsync(UserAccount userAccount)
         {
-            await _context.AddAsync(userAccount);
+            await _context.Users.AddAsync(userAccount);
         }
     }
 }
