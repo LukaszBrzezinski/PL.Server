@@ -4,7 +4,13 @@ using PL.BuildingBlocks.Application;
 
 namespace PL.Authorization.Infrastructure
 {
-    public class AuthorizationModule
+    public interface IAuthorizationModule
+    {
+        Task ExecuteCommandAsync<TResult>(ICommand command);
+        Task<TResult> ExecuteQueryAsync<TResult>(IQuery<TResult> query);
+    }
+
+    public class AuthorizationModule : IAuthorizationModule
     {
         private readonly ICommandBus _commandBus;
         private readonly IQueryBus _queryBus;
