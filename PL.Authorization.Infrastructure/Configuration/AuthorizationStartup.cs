@@ -20,7 +20,6 @@ namespace PL.Authorization.Infrastructure.Configuration
         private static void ConfigureCompositionRoot()
         {
             var containerBuilder = new ContainerBuilder();
-
             var sqlLiteConnectionString = "Data Source=:memory:";
 
             containerBuilder.RegisterModule(new ProcessingModule());

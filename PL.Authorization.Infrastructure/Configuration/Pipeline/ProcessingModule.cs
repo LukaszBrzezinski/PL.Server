@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Autofac;
 using MediatR.Extensions.Autofac.DependencyInjection;
+using PL.Authorization.Application;
 using PL.BuildingBlocks.Application;
 
 namespace PL.Authorization.Infrastructure.Configuration.Pipeline
@@ -12,7 +13,7 @@ namespace PL.Authorization.Infrastructure.Configuration.Pipeline
         protected override void Load(ContainerBuilder builder)
         {
             //TODO: search Application layer assemblies 
-            builder.AddMediatR();
+            builder.AddMediatR(typeof(IAuthorizationModule).Assembly);
 
             builder.RegisterType<ICommandBus>()
                 .As<CommandBus>()
