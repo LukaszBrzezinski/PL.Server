@@ -35,7 +35,8 @@ namespace PL.Authorization.Application.UserRegistration
 
         private bool CanRegisterUser()
         {
-            throw new NotImplementedException();
+            //TODO: implement logic
+            return true;
         }
     }
 }
