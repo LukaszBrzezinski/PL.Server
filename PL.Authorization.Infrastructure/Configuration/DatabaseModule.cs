@@ -42,7 +42,7 @@ namespace PL.Authorization.Infrastructure.Configuration
         internal static DbContextOptionsBuilder<AuthorizationDbContext> CreateDbContextOptionsBuilder(string connectionString)
         {
             var dbContextOptionsBuilder = new DbContextOptionsBuilder<AuthorizationDbContext>();
-            dbContextOptionsBuilder.UseSqlite(connectionString, opt =>
+            dbContextOptionsBuilder.UseSqlServer(connectionString, opt =>
             {
                 opt.MigrationsAssembly(typeof(AuthorizationDbContext).Assembly.GetName().Name);
                 opt.MigrationsHistoryTable("ef_migrationHistory");

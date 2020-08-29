@@ -15,12 +15,12 @@ namespace PL.Authorization.Infrastructure.User
 
             builder.HasKey(ua => ua.UserId);
 
-            builder.Property<string>("Login").HasColumnName("Login");
-            builder.Property<string>("Password").HasColumnName("Password");
-            builder.Property<string>("Email").HasColumnName("Email");
-            builder.Property<string>("IsActive").HasColumnName("IsActive");
-            builder.Property<string>("FirstName").HasColumnName("FirstName");
-            builder.Property<string>("LastName").HasColumnName("LastName");
+            builder.Property<string>("_login").HasColumnName("Login");
+            builder.Property<string>("_password").HasColumnName("Password");
+            builder.Property<string>("_email").HasColumnName("Email");
+            builder.Property<bool>("_isActive").HasColumnName("IsActive");
+            builder.Property<string>("_firstName").HasColumnName("FirstName");
+            builder.Property<string>("_lastName").HasColumnName("LastName");
         }
     }
 }

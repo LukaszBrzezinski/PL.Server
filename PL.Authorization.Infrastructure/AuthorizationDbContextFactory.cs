@@ -22,7 +22,7 @@ namespace PL.Authorization.Infrastructure
             //    .GetSection("Module");
             //var optionsBuilder = new DbContextOptionsBuilder();
             //optionsBuilder.Configure(configuration);
-            var dbContextOptionsBuilder = DatabaseModule.CreateDbContextOptionsBuilder("Data Source=:memory:");
+            var dbContextOptionsBuilder = DatabaseModule.CreateDbContextOptionsBuilder("Server=localhost;Database=pl_server_db;User Id=pl_server_user;Password=zaq1@WSX;");
 
             return new AuthorizationDbContext(dbContextOptionsBuilder.Options);
         }

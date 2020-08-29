@@ -20,7 +20,7 @@ namespace PL.Authorization.Infrastructure.Configuration
         private static void ConfigureCompositionRoot()
         {
             var containerBuilder = new ContainerBuilder();
-            var sqlLiteConnectionString = "Data Source=:memory:";
+            var sqlLiteConnectionString = "Server=localhost;Database=pl_server_db;User Id=pl_server_user;Password=zaq1@WSX;";
 
             containerBuilder.RegisterModule(new ProcessingModule());
             containerBuilder.RegisterModule(new DatabaseModule(sqlLiteConnectionString));
