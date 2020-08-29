@@ -18,6 +18,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "F:\Pobrane\aspnet-core-3-signup-verification-api-master\aspnet-core-3-signup-verification-api-master\WebApi.csproj", "{6A6882DA-C3AE-4D43-B64E-E478276F5DC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.Authorization.Infrastructure", "PL.Authorization.Infrastructure\PL.Authorization.Infrastructure.csproj", "{43102F19-077A-4B82-BE0E-0584A85791D8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F99EE505-B8EF-4E39-9EB0-21287FBDE8CD} = {F99EE505-B8EF-4E39-9EB0-21287FBDE8CD}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.BuildingBlocks.Application", "PL.BuildingBlocks.Application\PL.BuildingBlocks.Application.csproj", "{A51F9347-464E-4650-9345-600C0C4B069E}"
 EndProject
