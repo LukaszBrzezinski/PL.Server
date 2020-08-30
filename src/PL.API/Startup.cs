@@ -74,6 +74,7 @@ namespace PL.API
             services.AddIdentityServer()
                 .AddInMemoryIdentityResources(IdentityServerConfig.GetIdentityResources())
                 .AddInMemoryApiResources(IdentityServerConfig.GetApiResources())
+                .AddInMemoryApiScopes(IdentityServerConfig.GetApiScopes())
                 .AddInMemoryClients(IdentityServerConfig.GetClients())
                 .AddInMemoryPersistedGrants()
                 .AddProfileService<ProfileService>()

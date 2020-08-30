@@ -32,7 +32,7 @@ namespace PL.Authorization.Application.Configurations
             }
 
             context.Result = new GrantValidationResult(
-                authenticationResult.User.Id.ToString(),
+                authenticationResult.User.UserId.ToString(),
                 "forms",
                 authenticationResult.User.Claims);
         }

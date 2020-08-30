@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using Autofac;
 using Microsoft.EntityFrameworkCore;
@@ -39,7 +40,7 @@ namespace PL.Authorization.Infrastructure.Configuration
                 .As<IUnitOfWork>()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<SqlConnectionFactory>()
+            builder.Register(cf => new SqlConnectionFactory(_databaseConnectionString))
                 .As<ISqlConnectionFactory>()
                 .InstancePerLifetimeScope();
         }

@@ -20,16 +20,17 @@ namespace PL.Authorization.Application.Authentication
         public async Task<AuthenticationResult> Handle(AuthenticateCommand request, CancellationToken cancellationToken)
         {
             var connection = _connectionFactory.GetOpenConnection();
-
+            
             const string sql = "SELECT " +
-                               "[UserAccount].[Id], " +
+                               "[UserAccount].[UserId], " +
                                "[UserAccount].[Login], " +
-                               "[UserAccount].[Name], " +
+                               "[UserAccount].[FirstName], " +
+                               "[UserAccount].[LastName], " +
                                "[UserAccount].[Email], " +
                                "[UserAccount].[IsActive], " +
                                "[UserAccount].[Password] " +
                                "FROM [auth].[UserAccounts] AS [UserAccount] " +
-                               "WHERE [User].[Login] = @Login";
+                               "WHERE [UserAccount].[Login] = @Login";
 
             var user = await connection.QuerySingleOrDefaultAsync<UserDto>(sql, new { request.Login });
 
