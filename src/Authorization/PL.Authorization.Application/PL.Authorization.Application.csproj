@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -18,8 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\PL.BuildingBlocks.Application\PL.BuildingBlocks.Application.csproj" />
-    <ProjectReference Include="..\..\BuildingBlocks\PL.BuildingBlocks.Infrastructure\PL.BuildingBlocks.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\PL.BuildingBlocks.Application\PL.BuildingBlocks.Application.csproj" />
   </ItemGroup>
 
 </Project>
