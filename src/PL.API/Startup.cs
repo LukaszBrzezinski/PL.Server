@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using IdentityServer4.AccessTokenValidation;
 using IdentityServer4.AspNetIdentity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -66,6 +67,7 @@ namespace PL.API
         }
         private void ConfigureIdentityServer(IServiceCollection services)
         {
+            //TODO: change InMemory persisted grants to mssql and change developer singing credential
             services.AddIdentityServer()
                 .AddInMemoryIdentityResources(IdentityServerConfig.GetIdentityResources())
                 .AddInMemoryApiResources(IdentityServerConfig.GetApiResources())
@@ -78,7 +80,7 @@ namespace PL.API
                 .AddIdentityServerAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme, x =>
                 {
                     x.Authority = "http://localhost:5000";
-                    x.ApiName = "myMeetingsAPI";
+                    x.ApiName = IdentityServerConfig.ApiName;
                     x.RequireHttpsMetadata = false;
                 });
         }

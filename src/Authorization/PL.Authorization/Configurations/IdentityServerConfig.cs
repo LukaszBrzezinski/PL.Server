@@ -19,9 +19,9 @@ namespace PL.Authorization.Application.Configurations
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
-                new IdentityResource(ScopeConstants.Roles, new List<string>
+                new IdentityResource(CustomClaimTypes.Roles, new List<string>
                 {
-                    ScopeConstants.Roles
+                    CustomClaimTypes.Roles
                 })
             };
         }

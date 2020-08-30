@@ -9,7 +9,7 @@
         public const string Permission = "permission";
     }
 
-    public static class ScopeConstants
+    public static class CustomClaimTypes
     {
         ///<summary>A scope that specifies the roles of an entity</summary>
         public const string Roles = "roles";
