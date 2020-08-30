@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Autofac;
-using Microsoft.Extensions.Configuration;
-using PL.Authorization.Infrastructure.Configuration.Pipeline;
-using Serilog;
+﻿using Autofac;
+using PL.Authorization.Infrastructure.Configuration.Database;
+using PL.Authorization.Infrastructure.Configuration.Processing;
 
-namespace PL.Authorization.Infrastructure.Configuration
+namespace PL.Authorization.Infrastructure.Configuration.Authorization
 {
     public class AuthorizationStartup
     {

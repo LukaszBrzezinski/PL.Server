@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using PL.Authorization.Infrastructure.Configuration;
+using PL.Authorization.Infrastructure.Configuration.Database;
 
 namespace PL.Authorization.Infrastructure
 {

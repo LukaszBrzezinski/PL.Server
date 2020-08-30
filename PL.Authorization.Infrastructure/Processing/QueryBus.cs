@@ -2,7 +2,7 @@
 using MediatR;
 using PL.BuildingBlocks.Application;
 
-namespace PL.Authorization.Infrastructure
+namespace PL.Authorization.Infrastructure.Processing
 {
     internal class QueryBus : IQueryBus
     {

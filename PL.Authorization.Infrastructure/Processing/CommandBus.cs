@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using MediatR;
 using PL.BuildingBlocks.Application;
 
-namespace PL.Authorization.Infrastructure
+namespace PL.Authorization.Infrastructure.Processing
 {
     internal class CommandBus : ICommandBus
     {

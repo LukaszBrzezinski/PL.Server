@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using Autofac;
+﻿using Autofac;
 using Microsoft.EntityFrameworkCore;
 using PL.BuildingBlocks.Application;
 using PL.BuildingBlocks.Infrastructure;
 
-namespace PL.Authorization.Infrastructure.Configuration
+namespace PL.Authorization.Infrastructure.Configuration.Database
 {
     internal class DatabaseModule : Autofac.Module
     {

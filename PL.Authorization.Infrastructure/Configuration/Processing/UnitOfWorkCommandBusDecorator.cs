@@ -1,9 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using PL.BuildingBlocks.Application;
 using PL.BuildingBlocks.Infrastructure;
 
-namespace PL.Authorization.Infrastructure.Configuration.Pipeline
+namespace PL.Authorization.Infrastructure.Configuration.Processing
 {
     internal class UnitOfWorkCommandBusDecorator : ICommandBus
     {

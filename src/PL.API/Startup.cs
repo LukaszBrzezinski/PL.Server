@@ -18,6 +18,7 @@ using Microsoft.Extensions.Logging;
 using PL.API.Authorization;
 using PL.Authorization.Application.Configurations;
 using PL.Authorization.Infrastructure.Configuration;
+using PL.Authorization.Infrastructure.Configuration.Authorization;
 
 namespace PL.API
 {

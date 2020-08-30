@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Autofac;
+﻿using Autofac;
 using MediatR.Extensions.Autofac.DependencyInjection;
 using PL.Authorization.Application;
+using PL.Authorization.Infrastructure.Processing;
 using PL.BuildingBlocks.Application;
 
-namespace PL.Authorization.Infrastructure.Configuration.Pipeline
+namespace PL.Authorization.Infrastructure.Configuration.Processing
 {
     internal class ProcessingModule : Autofac.Module
     {
