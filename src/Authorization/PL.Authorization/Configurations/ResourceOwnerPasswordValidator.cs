@@ -8,9 +8,19 @@ namespace PL.Authorization.Application.Configurations
 {
     public class ResourceOwnerPasswordValidator : IResourceOwnerPasswordValidator
     {
-        public Task ValidateAsync(ResourceOwnerPasswordValidationContext context)
+        private readonly IAuthorizationModule _authorizationModule;
+
+        public ResourceOwnerPasswordValidator(IAuthorizationModule authorizationModule)
         {
-            throw new NotImplementedException();
+            _authorizationModule = authorizationModule;
+        }
+
+        public async Task ValidateAsync(ResourceOwnerPasswordValidationContext context)
+        {
+            var authenticationResult = await _authorizationModule.ExecuteCommandAsync(
+                new AuthenticateCommand(context.UserName, context.Password));
+
+
         }
     }
 }
