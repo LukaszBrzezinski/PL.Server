@@ -21,5 +21,13 @@ namespace PL.Authorization.Infrastructure.Configuration.Pipeline
             await _commandBus.ExecuteCommandAsync(command);
             await _unitOfWork.CommitAsync();
         }
+
+        public async Task<TResult> ExecuteCommandAsync<TResult>(ICommand<TResult> command)
+        {
+            var result = await _commandBus.ExecuteCommandAsync(command);
+            await _unitOfWork.CommitAsync();
+
+            return result;
+        }
     }
 }

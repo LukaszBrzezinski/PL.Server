@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Autofac;
 using Microsoft.EntityFrameworkCore;
+using PL.BuildingBlocks.Application;
 using PL.BuildingBlocks.Infrastructure;
 
 namespace PL.Authorization.Infrastructure.Configuration
@@ -36,6 +37,10 @@ namespace PL.Authorization.Infrastructure.Configuration
 
             builder.RegisterType<UnitOfWork>()
                 .As<IUnitOfWork>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<SqlConnectionFactory>()
+                .As<ISqlConnectionFactory>()
                 .InstancePerLifetimeScope();
         }
 
