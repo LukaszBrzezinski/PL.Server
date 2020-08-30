@@ -27,11 +27,25 @@ namespace PL.Authorization.Application.Configurations
         }
 
         // Api resources.
+        // https://identityserver4.readthedocs.io/en/latest/topics/resources.html?highlight=apiscope#api-resources
         public static IEnumerable<ApiResource> GetApiResources()
         {
             return new List<ApiResource>
             {
                 new ApiResource(ApiName, ApiFriendlyName)
+                {
+                    Scopes = { ApiName }
+                }
+            };
+        }
+
+        // Api scopes.
+        //https://identityserver4.readthedocs.io/en/latest/topics/resources.html?highlight=apiscope#scopes
+        public static IEnumerable<ApiScope> GetApiScopes()
+        {
+            return new List<ApiScope>
+            {
+                new ApiScope(ApiName, ApiFriendlyName)
             };
         }
 

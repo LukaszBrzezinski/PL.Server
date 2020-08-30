@@ -55,6 +55,8 @@ namespace PL.API
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseIdentityServer();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
