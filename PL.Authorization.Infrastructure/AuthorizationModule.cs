@@ -17,6 +17,15 @@ namespace PL.Authorization.Infrastructure
             }
         }
 
+        public async Task<TResult> ExecuteCommandAsync<TResult>(ICommand<TResult> command)
+        {
+            using (var scope = AuthorizationCompositionRoot.BeginLifetimeScope())
+            {
+                var commandBus = scope.Resolve<ICommandBus>();
+                return await commandBus.ExecuteCommandAsync(command);
+            }
+        }
+
         public async Task<TResult> ExecuteQueryAsync<TResult>(IQuery<TResult> query)
         {
             using (var scope = AuthorizationCompositionRoot.BeginLifetimeScope())

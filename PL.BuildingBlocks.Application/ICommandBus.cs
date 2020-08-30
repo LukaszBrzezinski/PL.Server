@@ -5,5 +5,6 @@ namespace PL.BuildingBlocks.Application
     public interface ICommandBus
     {
         Task ExecuteCommandAsync(ICommand command);
+        Task<TResult> ExecuteCommandAsync<TResult>(ICommand<TResult> command);
     }
 }

@@ -20,5 +20,10 @@ namespace PL.Authorization.Infrastructure
         {
             await _mediator.Send(command);
         }
+
+        public async Task<TResult> ExecuteCommandAsync<TResult>(ICommand<TResult> command)
+        {
+            return await _mediator.Send(command);
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using IdentityServer4.Validation;
+using PL.Authorization.Application.Authentication;
 
 namespace PL.Authorization.Application.Configurations
 {
