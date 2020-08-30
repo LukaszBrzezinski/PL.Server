@@ -21,7 +21,7 @@ namespace PL.Authorization.Application.Configurations
                 new IdentityResources.Profile(),
                 new IdentityResource(ScopeConstants.Roles, new List<string>
                 {
-                    JwtClaimTypes.Role
+                    ScopeConstants.Roles
                 })
             };
         }
@@ -53,7 +53,6 @@ namespace PL.Authorization.Application.Configurations
                     AllowedScopes = {
                         IdentityServerConstants.StandardScopes.OpenId, // For UserInfo endpoint.
                         IdentityServerConstants.StandardScopes.Profile,
-                        ScopeConstants.Roles,
                         ApiName
                     },
                     AllowOfflineAccess = true, // For refresh token.
@@ -64,6 +63,7 @@ namespace PL.Authorization.Application.Configurations
                     //SlidingRefreshTokenLifetime = 900,
                 },
 
+                // Swagger client
                 new Client
                 {
                     ClientId = SwaggerClientID,

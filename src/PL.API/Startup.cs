@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using IdentityServer4.AspNetIdentity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using PL.API.Authorization;
+using PL.Authorization.Application.Configurations;
 using PL.Authorization.Infrastructure.Configuration;
 
 namespace PL.API
@@ -31,6 +33,7 @@ namespace PL.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            ConfigureIdentityServer(services);
         }
 
         //Don't call builder.Populate(), that happens in AutofacServiceProviderFactory
@@ -60,6 +63,24 @@ namespace PL.API
             {
                 endpoints.MapControllers();
             });
+        }
+        private void ConfigureIdentityServer(IServiceCollection services)
+        {
+            services.AddIdentityServer()
+                .AddInMemoryIdentityResources(IdentityServerConfig.GetIdentityResources())
+                .AddInMemoryApiResources(IdentityServerConfig.GetApiResources())
+                .AddInMemoryClients(IdentityServerConfig.GetClients())
+                .AddInMemoryPersistedGrants()
+                .AddProfileService<ProfileService>()
+                .AddDeveloperSigningCredential();
+
+            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddIdentityServerAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme, x =>
+                {
+                    x.Authority = "http://localhost:5000";
+                    x.ApiName = "myMeetingsAPI";
+                    x.RequireHttpsMetadata = false;
+                });
         }
 
         private void InitializeModules(ILifetimeScope container)
