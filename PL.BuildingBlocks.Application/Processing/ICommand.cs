@@ -1,7 +1,6 @@
-﻿using System;
-using MediatR;
+﻿using MediatR;
 
-namespace PL.BuildingBlocks.Application
+namespace PL.BuildingBlocks.Application.Processing
 {
     public interface ICommand : IRequest
     {

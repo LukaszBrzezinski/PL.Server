@@ -3,6 +3,7 @@ using MediatR.Extensions.Autofac.DependencyInjection;
 using PL.Authorization.Application;
 using PL.Authorization.Infrastructure.Processing;
 using PL.BuildingBlocks.Application;
+using PL.BuildingBlocks.Application.Processing;
 
 namespace PL.Authorization.Infrastructure.Configuration.Processing
 {

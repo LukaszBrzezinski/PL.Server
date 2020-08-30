@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using MediatR;
 using PL.BuildingBlocks.Application;
+using PL.BuildingBlocks.Application.Processing;
 
 namespace PL.Authorization.Infrastructure.Processing
 {

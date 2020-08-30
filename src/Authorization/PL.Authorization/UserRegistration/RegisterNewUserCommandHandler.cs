@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using MediatR;
 using PL.Authorization.Application.User;
 using PL.BuildingBlocks.Application;
+using PL.BuildingBlocks.Application.Processing;
 
 namespace PL.Authorization.Application.UserRegistration
 {

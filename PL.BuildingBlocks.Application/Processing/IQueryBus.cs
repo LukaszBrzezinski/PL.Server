@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace PL.BuildingBlocks.Application
+namespace PL.BuildingBlocks.Application.Processing
 {
     public interface IQueryBus
     {

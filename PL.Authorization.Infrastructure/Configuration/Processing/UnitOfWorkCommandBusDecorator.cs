@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using PL.BuildingBlocks.Application;
+using PL.BuildingBlocks.Application.Processing;
 using PL.BuildingBlocks.Infrastructure;
 
 namespace PL.Authorization.Infrastructure.Configuration.Processing

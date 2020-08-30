@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Dapper;
 using PL.Authorization.Application.Configurations;
 using PL.BuildingBlocks.Application;
+using PL.BuildingBlocks.Application.Processing;
 
 namespace PL.Authorization.Application.Authentication
 {

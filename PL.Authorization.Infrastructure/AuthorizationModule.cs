@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Autofac;
 using PL.Authorization.Application;
 using PL.BuildingBlocks.Application;
+using PL.BuildingBlocks.Application.Processing;
 
 namespace PL.Authorization.Infrastructure
 {

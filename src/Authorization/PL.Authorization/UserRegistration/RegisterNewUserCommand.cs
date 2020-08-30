@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using PL.BuildingBlocks.Application;
+using PL.BuildingBlocks.Application.Processing;
 
 namespace PL.Authorization.Application.UserRegistration
 {
