@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -18,7 +19,7 @@ namespace PL.Authorization.Infrastructure.User
             builder.Property<string>("_login").HasColumnName("Login");
             builder.Property<string>("_password").HasColumnName("Password");
             builder.Property<string>("_email").HasColumnName("Email");
-            builder.Property<bool>("_isActive").HasColumnName("IsActive");
+            builder.Property<bool>("_isActive").HasColumnName("IsActive").HasColumnType("BIT");
             builder.Property<string>("_firstName").HasColumnName("FirstName");
             builder.Property<string>("_lastName").HasColumnName("LastName");
         }

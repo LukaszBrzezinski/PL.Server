@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PL.Authorization.Infrastructure;
 
 namespace PL.Authorization.Infrastructure.Migrations
 {
     [DbContext(typeof(AuthorizationDbContext))]
-    partial class AuthorizationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200830115408_ChangeUserAccountIsActiveType")]
+    partial class ChangeUserAccountIsActiveType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
