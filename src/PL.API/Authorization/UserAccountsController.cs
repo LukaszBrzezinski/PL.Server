@@ -11,11 +11,11 @@ namespace PL.API.Authorization
 {
     [Route("authorization/[controller]")]
     [ApiController]
-    public class UserRegistrationsController : ControllerBase
+    public class UserAccountsController : ControllerBase
     {
         private readonly IAuthorizationModule _authorizationModule;
 
-        public UserRegistrationsController(IAuthorizationModule authorizationModule)
+        public UserAccountsController(IAuthorizationModule authorizationModule)
         {
             _authorizationModule = authorizationModule;
         }
