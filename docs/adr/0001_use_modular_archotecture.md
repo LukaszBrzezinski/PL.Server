@@ -1,7 +1,7 @@
 # Use modular architecture
 
 * Status: accepted 
-* Date: 2020-08-30
+* Date: 2020-09-03
 
 ## Context and Problem Statement
 
@@ -18,24 +18,13 @@ This projet will be used for private lessons application. At this moment I don't
 ## Considered Options
 
 * microservices
-* monolith
 * modular monolith
 
 ## Decision Outcome
 
-Chosen option: modular monolith, because [justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force force | … | comes out best (see below)].
+Chosen option: modular monolith, because it's easier to maintain by single developer. This type of architecture is simple enouch to lern DDD. Also deployment could be done easier compared to microservices. 
 
-### Positive Consequences <!-- optional -->
-
-* [e.g., improvement of quality attribute satisfaction, follow-up decisions required, …]
-* …
-
-### Negative Consequences <!-- optional -->
-
-* [e.g., compromising quality attribute, follow-up decisions required, …]
-* …
-
-## Pros and Cons of the Options <!-- optional -->
+## Pros and Cons of the Options
 
 ### [microservices]
 
@@ -53,23 +42,15 @@ cons:
 * problems with async operations and eventual consistency
 
 
-### [monolith]
+### [modular monolith]
+pros:
+* decouples domain logic
+* easy to maintain
+* easier to change bounded context borders
+* easy to realase
+* less error prone for bad architecture decisions 
+* no http communication between modules
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
-
-### [option 3]
-
-[example | description | pointer to more information | …] <!-- optional -->
-
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
-
-## Links <!-- optional -->
-
-* [Link type] [Link to ADR] <!-- example: Refined by [ADR-0005](0005-example.md) -->
-* … <!-- numbers of links can vary -->
+cons:
+* hard to scale
+* realases have to be done with whole application
